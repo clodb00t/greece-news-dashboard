@@ -1,0 +1,14 @@
+{
+  "name": "greece-news-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "fetch": "node fetcher.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "rss-parser": "^3.12.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "feeds": [
+    { "name": "Ekathimerini", "url": "https://www.ekathimerini.com/feed/" },
+    { "name": "Kathimerini", "url": "https://www.kathimerini.gr/feed/" },
+    { "name": "Reuters Europe", "url": "https://www.reuters.com/world/europe/rss.xml" },
+    { "name": "BBC Europe", "url": "https://feeds.bbci.co.uk/news/world/europe/rss.xml" },
+    { "name": "Greek Reporter", "url": "https://greekreporter.com/feed/" }
+  ],
+  "keywords": ["Greece","Athens","Greek","Aegean","Cyprus","Athens"],
+  "maxItems": 7
+}

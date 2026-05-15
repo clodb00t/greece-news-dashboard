@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Greece Morning Briefing</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;max-width:760px;margin:20px auto;color:#0b2545}
+    header{border-bottom:1px solid #eee;margin-bottom:14px}
+    h1{font-size:18px;margin:6px 0}
+    .time{color:#666;font-size:13px}
+    .highlight{background:#f0f6ff;padding:12px;border-left:4px solid #2b7cff;margin:10px 0}
+    ul{padding-left:20px}
+    li{margin:8px 0}
+    a{color:#0b5ed7;text-decoration:none}
+    footer{color:#666;font-size:12px;margin-top:18px}
+    .source{font-size:12px;color:#666}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily 9:00 AM Greece briefing — Athens time</h1>
+    <div class="time" id="time">Loading…</div>
+  </header>
+
+  <section class="highlight" id="highlight">Loading…</section>
+
+  <ul id="bullets"> </ul>
+
+  <footer>
+    Sources: configured RSS feeds. Auto‑refresh every 60s.
+  </footer>
+
+<script>
+async function load(){
+  try{
+    const res = await fetch('/api/news');
+    const j = await res.json();
+    document.getElementById('time').textContent = 'Updated: ' + (new Date(j.generatedAt || Date.now())).toLocaleString('en-GB', {timeZone:'Europe/Athens'});
+    document.getElementById('highlight').textContent = j.highlight || 'No highlights yet.';
+    const ul = document.getElementById('bullets'); ul.innerHTML='';
+    (j.bullets || []).forEach(b =>{
+      const li = document.createElement('li');
+      const a = document.createElement('a'); a.href = b.link; a.target='_blank'; a.textContent = b.text || '';
+      li.appendChild(a);
+      const s = document.createElement('div'); s.className='source'; s.textContent = b.source || '';
+      li.appendChild(s);
+      ul.appendChild(li);
+    });
+  }catch(e){
+    document.getElementById('highlight').textContent = 'Failed to load data';
+  }
+}
+
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
