@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Proto Thema",
+    "url": "https://www.protothema.gr/",
+    "reason": "Rated 'Questionable' by MBFC due to poor sourcing, lack of ownership transparency, and multiple failed fact checks. High sensationalism.",
+    "signals": ["MBFC Questionable", "Failed Fact Checks"]
+  },
+  {
+    "name": "Greek Reporter",
+    "url": "https://greekreporter.com/",
+    "reason": "Rated 'Right Bias' and 'Mixed Factual Reporting' by MBFC. Known for occasional use of poor sources and failed fact checks.",
+    "signals": ["MBFC Mixed Factual", "Right Bias"]
+  },
+  {
+    "name": "The National Herald (Ethnikos Kyrix)",
+    "url": "https://www.ekirikas.com/",
+    "reason": "MBFC 'Right-Center Bias' and 'Mixed Factual Reporting'. Criticized for poor sourcing and lack of transparency.",
+    "signals": ["MBFC Mixed Factual"]
+  },
+  {
+    "name": "Newsbomb.gr",
+    "url": "https://www.newsbomb.gr/",
+    "reason": "While popular, it frequently employs clickbait, sensationalist headlines, and has lower trust scores in the Reuters Digital News Report.",
+    "signals": ["Low Trust Score", "Sensationalism"]
+  },
+  {
+    "name": "Various Social Media Blogs",
+    "url": "N/A",
+    "reason": "Excluded as a category unless specific provenance and editorial standards are proven. Prone to unverified rumors and propaganda.",
+    "signals": ["Lack of Editorial Control"]
+  }
+]

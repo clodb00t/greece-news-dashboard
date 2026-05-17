@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Greece Fact Check (FactChecker.gr)",
+    "url": "https://factchecker.gr/",
+    "language": ["Greek"],
+    "primary_topics": ["politics", "local", "fact-checking"],
+    "reliability_score": 0.95,
+    "provenance_notes": "Member of IFCN and EDMO. Rated 'Least Biased' and 'High Factual Reporting' by MBFC.",
+    "integration_method": "RSS/API"
+  },
+  {
+    "name": "Ellinika Hoaxes",
+    "url": "https://www.ellinikahoaxes.gr/",
+    "language": ["Greek"],
+    "primary_topics": ["politics", "tech", "fact-checking"],
+    "reliability_score": 0.95,
+    "provenance_notes": "Accredited by IFCN. Facebook's primary fact-checking partner in Greece.",
+    "integration_method": "RSS/API"
+  },
+  {
+    "name": "Kathimerini",
+    "url": "https://www.kathimerini.gr/",
+    "language": ["Greek", "English"],
+    "primary_topics": ["politics", "economy", "culture"],
+    "reliability_score": 0.85,
+    "provenance_notes": "Traditional 'newspaper of record'. Center-right/liberal bias but high editorial standards.",
+    "integration_method": "RSS"
+  },
+  {
+    "name": "Naftemporiki",
+    "url": "https://www.naftemporiki.gr/",
+    "language": ["Greek"],
+    "primary_topics": ["economy", "politics"],
+    "reliability_score": 0.85,
+    "provenance_notes": "Primary financial newspaper. Focus on factual economic reporting reduces political noise.",
+    "integration_method": "RSS"
+  },
+  {
+    "name": "Inside Story",
+    "url": "https://insidestory.gr/",
+    "language": ["Greek"],
+    "primary_topics": ["politics", "economy", "tech", "local"],
+    "reliability_score": 0.9,
+    "provenance_notes": "Subscription-based investigative journalism. High focus on in-depth research and transparency.",
+    "integration_method": "Paid/RSS"
+  },
+  {
+    "name": "Solomon",
+    "url": "https://wearesolomon.com/",
+    "language": ["Greek", "English"],
+    "primary_topics": ["politics", "culture", "local"],
+    "reliability_score": 0.9,
+    "provenance_notes": "Award-winning independent investigative outlet. High transparency on funding and methodology.",
+    "integration_method": "RSS/Free"
+  },
+  {
+    "name": "Reporters United",
+    "url": "https://www.reportersunited.gr/",
+    "language": ["Greek", "English"],
+    "primary_topics": ["politics", "local"],
+    "reliability_score": 0.9,
+    "provenance_notes": "Network of investigative journalists. Strict independence policy; no state or corporate funding.",
+    "integration_method": "RSS/Free"
+  },
+  {
+    "name": "News247",
+    "url": "https://www.news247.gr/",
+    "language": ["Greek"],
+    "primary_topics": ["politics", "economy", "local"],
+    "reliability_score": 0.75,
+    "provenance_notes": "Popular digital platform. Generally reliable but can be more sensationalist than traditional print.",
+    "integration_method": "RSS"
+  },
+  {
+    "name": "ERT News",
+    "url": "https://www.ertnews.gr/",
+    "language": ["Greek"],
+    "primary_topics": ["politics", "economy", "culture", "local"],
+    "reliability_score": 0.7,
+    "provenance_notes": "Public service broadcaster. Generally reliable but prone to government influence/pressure.",
+    "integration_method": "RSS/Free"
+  },
+  {
+    "name": "Euronews (Greek)",
+    "url": "https://gr.euronews.com/",
+    "language": ["Greek"],
+    "primary_topics": ["politics", "economy", "culture"],
+    "reliability_score": 0.85,
+    "provenance_notes": "International perspective in Greek. Provides useful cross-check against domestic narratives.",
+    "integration_method": "RSS"
+  },
+  {
+    "name": "Deutsche Welle (Greek)",
+    "url": "https://www.dw.com/el/",
+    "language": ["Greek"],
+    "primary_topics": ["politics", "economy", "culture"],
+    "reliability_score": 0.9,
+    "provenance_notes": "International public broadcaster. Highly reliable cross-checking source.",
+    "integration_method": "RSS"
+  },
+  {
+    "name": "Reuters",
+    "url": "https://www.reuters.com/",
+    "language": ["English"],
+    "primary_topics": ["politics", "economy", "tech"],
+    "reliability_score": 0.95,
+    "provenance_notes": "Global standard for neutral wire reporting. Essential for cross-corroboration.",
+    "integration_method": "RSS/API"
+  }
+]
