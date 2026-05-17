@@ -1,0 +1,7 @@
+{
+  "demoteThreshold": 0.45,
+  "hideFlagged": false,
+  "languageOrder": ["el","en"],
+  "translationProvider": "deepl",
+  "trustSources": ["Reuters Europe","BBC Europe","Kathimerini","Ekathimerini"]
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>News.Stav Admin</title>
+  <style>
+    body{font-family:system-ui,Arial;margin:24px;color:#111}
+    textarea{width:100%;height:240px;font-family:monospace}
+    input[type=text]{width:100%}
+    .box{margin-bottom:16px}
+    .btn{padding:8px 12px;background:#0077cc;color:white;border-radius:6px;border:0;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h2>news.stav.gr — Admin</h2>
+  <p>Quick admin for sources and settings. Provide the admin token when prompted.</p>
+  <div class="box">
+    <label>Admin token: <input id="token" type="text" placeholder="enter admin token"></label>
+  </div>
+  <div class="box">
+    <h3>Sources (sources.json)</h3>
+    <textarea id="sources" placeholder='sources.json'></textarea>
+    <div style="margin-top:8px">
+      <button id="saveSources" class="btn">Save sources</button>
+      <button id="refreshSources" class="btn" style="background:#666;margin-left:8px">Reload</button>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>Settings (trust & display)</h3>
+    <textarea id="settings" placeholder='settings.json'></textarea>
+    <div style="margin-top:8px">
+      <button id="saveSettings" class="btn">Save settings</button>
+      <button id="refreshSettings" class="btn" style="background:#666;margin-left:8px">Reload</button>
+    </div>
+  </div>
+
+  <script>
+    async function fetchSources(){
+      const token = document.getElementById('token').value;
+      const r = await fetch('/api/admin/sources?token='+encodeURIComponent(token));
+      if(!r.ok){ alert('failed to load sources: '+r.status); return; }
+      const j = await r.json();
+      document.getElementById('sources').value = JSON.stringify(j, null, 2);
+    }
+    async function saveSources(){
+      const token = document.getElementById('token').value;
+      try{
+        const body = JSON.parse(document.getElementById('sources').value);
+        const r = await fetch('/api/admin/sources', { method:'POST', headers:{'Content-Type':'application/json','x-admin-token':token}, body: JSON.stringify(body)});
+        if(!r.ok){ alert('save failed: '+r.status); return; }
+        alert('Saved');
+      }catch(e){ alert('Invalid JSON'); }
+    }
+
+    async function fetchSettings(){
+      const token = document.getElementById('token').value;
+      const r = await fetch('/api/admin/settings?token='+encodeURIComponent(token));
+      if(!r.ok){ alert('failed to load settings: '+r.status); return; }
+      const j = await r.json();
+      document.getElementById('settings').value = JSON.stringify(j, null, 2);
+    }
+    async function saveSettings(){
+      const token = document.getElementById('token').value;
+      try{
+        const body = JSON.parse(document.getElementById('settings').value);
+        const r = await fetch('/api/admin/settings', { method:'POST', headers:{'Content-Type':'application/json','x-admin-token':token}, body: JSON.stringify(body)});
+        if(!r.ok){ alert('save failed: '+r.status); return; }
+        alert('Saved');
+      }catch(e){ alert('Invalid JSON'); }
+    }
+
+    document.getElementById('refreshSources').onclick = fetchSources;
+    document.getElementById('saveSources').onclick = saveSources;
+    document.getElementById('refreshSettings').onclick = fetchSettings;
+    document.getElementById('saveSettings').onclick = saveSettings;
+
+    // Preload current files if token already present
+    const tokenInput = document.getElementById('token');
+    tokenInput.addEventListener('change', ()=>{ if(tokenInput.value) { fetchSources(); fetchSettings(); } });
+  </script>
+</body>
+</html>
