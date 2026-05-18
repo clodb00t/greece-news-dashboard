@@ -4868,3 +4868,98 @@ Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
 Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
 Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
 Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Fetcher failed Error: ENOSPC: no space left on device, write
+    at Object.writeFileSync (node:fs:2414:20)
+    at run (/home/ubuntu/.openclaw/workspace/workspace/fetcher.js:58:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  errno: -28,
+  code: 'ENOSPC',
+  syscall: 'write'
+}
+FailedFailed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
+Failed to fetch feed https://www.ekathimerini.com/feed/ Status code 403
+Failed to fetch feed https://www.kathimerini.gr/feed/ Status code 410
+Failed to fetch feed https://www.reuters.com/world/europe/rss.xml Status code 401
+Wrote /home/ubuntu/.openclaw/workspace/workspace/news.json
