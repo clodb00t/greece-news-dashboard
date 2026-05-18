@@ -3,453 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1f2a" />
   <title>Μπαλαούρο — Ουζερί & Ψαροταβέρνα στην Καβάλα</title>
-  <meta name="description" content="Πολυτελής one-page παρουσίαση για το Ουζερί Μπαλαούρο στην Καβάλα — φρέσκα ψάρια, μεζέδες, θαλασσινή ατμόσφαιρα και premium brand αισθητική." />
+  <meta name="description" content="Πολυσελιδη premium παρουσίαση για το Μπαλαούρο στην Καβάλα, με φαγητό, φωτογραφίες και καθαρή πολυτελή αισθητική." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #071620;
-      --bg2: #0b2130;
-      --card: rgba(255,255,255,.08);
-      --card2: rgba(255,255,255,.12);
-      --text: #edf7fb;
-      --muted: rgba(237,247,251,.74);
-      --accent: #8ee3ff;
-      --accent2: #d7b46a;
-      --line: rgba(255,255,255,.14);
-      --shadow: 0 30px 80px rgba(0,0,0,.42);
-      --radius: 28px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% 10%, rgba(142,227,255,.2), transparent 55%),
-        radial-gradient(1000px 700px at 90% 20%, rgba(215,180,106,.16), transparent 50%),
-        linear-gradient(180deg, #041019 0%, #071620 45%, #0a1b25 100%);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: linear-gradient(180deg, rgba(0,0,0,.55), transparent 85%);
-      opacity: .35;
-    }
-    a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
-    .topbar {
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 22px 0;
-      gap: 20px;
-    }
-    .brand {
-      display:flex; align-items:center; gap: 14px; font-weight: 700;
-      letter-spacing: .02em;
-    }
-    .logo {
-      width: 44px; height: 44px; border-radius: 14px;
-      background: linear-gradient(145deg, rgba(142,227,255,.95), rgba(215,180,106,.92));
-      box-shadow: 0 10px 28px rgba(142,227,255,.22);
-      position: relative;
-      overflow: hidden;
-    }
-    .logo::before, .logo::after {
-      content:""; position:absolute; border-radius:999px; background:rgba(255,255,255,.85);
-    }
-    .logo::before { width: 18px; height: 6px; left: 12px; top: 16px; transform: rotate(-12deg); }
-    .logo::after { width: 10px; height: 10px; left: 22px; top: 21px; box-shadow: -10px -7px 0 0 rgba(255,255,255,.45); }
-    .brand small { display:block; color: var(--muted); font-weight: 500; margin-top: 2px; }
-    .nav { display:flex; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
-    .nav a:hover { color: var(--text); }
-    .hero {
-      position: relative;
-      display:grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap: 28px;
-      align-items: stretch;
-      padding: 28px 0 52px;
-    }
-    .hero-copy, .hero-card, .panel, .feature, .menu-card, .contact-card {
-      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.04));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
-    }
-    .hero-copy { padding: 42px; position: relative; overflow: hidden; }
-    .eyebrow {
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 10px 14px; border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.08);
-      color: var(--muted); font-size: 13px; font-weight: 600;
-    }
-    .eyebrow i {
-      width: 8px; height: 8px; border-radius: 999px; background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(142,227,255,.12);
-    }
-    h1 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(3rem, 6vw, 5.2rem);
-      line-height: .95;
-      margin: 20px 0 18px;
-      max-width: 11ch;
-      letter-spacing: -.03em;
-    }
-    .hero-copy p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.8;
-      max-width: 62ch;
-      margin: 0 0 24px;
-    }
-    .cta-row { display:flex; gap: 14px; flex-wrap: wrap; margin: 28px 0 30px; }
-    .btn {
-      display:inline-flex; align-items:center; justify-content:center;
-      gap: 10px; padding: 14px 18px; border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      font-weight: 700; letter-spacing: .01em;
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn.primary {
-      color: #03131c;
-      background: linear-gradient(135deg, var(--accent), #f2fbff);
-      border-color: transparent;
-    }
-    .btn.secondary { background: rgba(255,255,255,.05); color: var(--text); }
-    .quick-metrics {
-      display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
-      margin-top: 28px;
-    }
-    .metric {
-      padding: 16px; border-radius: 20px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    .metric strong { display:block; font-size: 1.2rem; margin-bottom: 4px; }
-    .metric span { color: var(--muted); font-size: 13px; line-height: 1.4; }
-    .hero-card {
-      padding: 20px;
-      position: relative;
-      display:grid;
-      gap: 16px;
-      align-content: start;
-    }
-    .visual {
-      min-height: 340px;
-      border-radius: 24px;
-      padding: 24px;
-      background:
-        radial-gradient(900px 260px at 10% 10%, rgba(142,227,255,.3), transparent 36%),
-        radial-gradient(500px 200px at 85% 20%, rgba(215,180,106,.25), transparent 42%),
-        linear-gradient(160deg, rgba(8,24,35,.95), rgba(4,16,25,.88));
-      border: 1px solid rgba(255,255,255,.1);
-      position: relative;
-      overflow:hidden;
-    }
-    .visual::before {
-      content: "";
-      position:absolute; inset: 18px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    .sea {
-      position:absolute; inset: auto 0 0 0; height: 44%;
-      background: linear-gradient(180deg, transparent, rgba(20,70,96,.3) 35%, rgba(17,96,131,.6) 100%);
-    }
-    .sun {
-      position:absolute; top: 44px; right: 48px; width: 86px; height: 86px; border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, #fff7d8, #f0c97a 48%, rgba(240,201,122,.25) 72%, transparent 74%);
-      filter: blur(.2px);
-      box-shadow: 0 0 60px rgba(240,201,122,.18);
-    }
-    .boat {
-      position:absolute; left: 12%; bottom: 27%; width: 220px; height: 120px;
-      filter: drop-shadow(0 18px 24px rgba(0,0,0,.25));
-    }
-    .boat::before {
-      content:""; position:absolute; left: 15%; bottom: 18px; width: 70%; height: 18px;
-      background: linear-gradient(90deg, #3b5565, #edf7fb, #3b5565); border-radius: 50% 50% 35% 35%;
-      clip-path: polygon(8% 55%, 20% 32%, 82% 32%, 94% 55%, 72% 100%, 28% 100%);
-    }
-    .boat::after {
-      content:""; position:absolute; left: 48%; bottom: 34px; width: 6px; height: 54px; background: rgba(255,255,255,.7);
-      box-shadow: 30px -18px 0 -1px rgba(255,255,255,.45);
-    }
-    .wave {
-      position:absolute; left:-5%; right:-5%; bottom: 6%; height: 34%;
-      background:
-        radial-gradient(circle at 10% 30%, rgba(255,255,255,.25) 0 8px, transparent 9px) 0 0 / 120px 48px,
-        radial-gradient(circle at 50% 30%, rgba(255,255,255,.18) 0 8px, transparent 9px) 0 0 / 160px 48px,
-        radial-gradient(circle at 90% 30%, rgba(255,255,255,.22) 0 8px, transparent 9px) 0 0 / 110px 48px;
-      opacity: .8;
-      animation: drift 12s linear infinite;
-    }
-    @keyframes drift { from { transform: translateX(0); } to { transform: translateX(120px); } }
-    .info-stack {
-      display:grid; gap: 12px; grid-template-columns: repeat(2, 1fr);
-    }
-    .pill {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    .pill span { display:block; color: var(--muted); font-size: 12px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .12em; }
-    .pill strong { font-size: 15px; line-height: 1.5; }
-    .section { padding: 18px 0 24px; }
-    .section h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(2rem, 3vw, 3rem);
-      margin: 0 0 10px;
-      letter-spacing: -.02em;
-    }
-    .section p.lead { margin: 0 0 24px; color: var(--muted); max-width: 70ch; line-height: 1.8; }
-    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .feature { padding: 22px; }
-    .feature .icon {
-      width: 44px; height: 44px; border-radius: 16px; margin-bottom: 14px;
-      display:grid; place-items:center; background: linear-gradient(145deg, rgba(142,227,255,.18), rgba(215,180,106,.15));
-      border: 1px solid rgba(255,255,255,.08); font-size: 1.1rem;
-    }
-    .feature h3 { margin: 0 0 10px; font-size: 1.05rem; }
-    .feature p { margin: 0; color: var(--muted); line-height: 1.72; font-size: .98rem; }
-    .menu-grid {
-      display:grid; grid-template-columns: 1.15fr .85fr; gap: 16px; align-items:start;
-    }
-    .menu-card { padding: 24px; }
-    .menu-list {
-      display:grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin-top: 18px;
-    }
-    .menu-item {
-      padding: 14px 15px; border-radius: 16px;
-      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
-    }
-    .menu-item strong { display:block; margin-bottom: 5px; }
-    .menu-item span { color: var(--muted); font-size: 13px; line-height: 1.55; }
-    .quote {
-      padding: 28px;
-      background: linear-gradient(180deg, rgba(142,227,255,.12), rgba(255,255,255,.04));
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,.08);
-      position: sticky; top: 18px;
-    }
-    .quote p {
-      font-size: 1.05rem; line-height: 1.9; color: var(--text); margin: 0 0 18px;
-    }
-    .quote .signature { color: var(--muted); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
-    .contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .contact-card { padding: 24px; }
-    .contact-list { display:grid; gap: 12px; margin-top: 14px; }
-    .contact-row {
-      display:flex; align-items:flex-start; justify-content:space-between; gap: 10px;
-      padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .contact-row:last-child { border-bottom: 0; }
-    .contact-row span { color: var(--muted); font-size: 13px; display:block; margin-bottom: 5px; }
-    .contact-row strong { font-weight: 700; }
-    .footer {
-      padding: 36px 0 40px; color: var(--muted); font-size: 13px; line-height: 1.7;
-    }
-    .chips { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-    .chip {
-      padding: 10px 14px; border-radius: 999px;
-      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
-      color: var(--text); font-size: 13px; white-space: nowrap;
-    }
-    .divider {
-      height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
-      margin: 22px 0;
-    }
-    @media (max-width: 980px) {
-      .hero, .menu-grid, .contact-grid, .grid-3 { grid-template-columns: 1fr; }
-      .hero-copy { padding: 28px; }
-      .quick-metrics { grid-template-columns: 1fr; }
-      .info-stack { grid-template-columns: 1fr; }
-      .nav { display:none; }
-      .boat { left: 8%; }
-    }
-    @media (max-width: 640px) {
-      .wrap { width: min(100% - 24px, 1180px); }
-      .topbar { padding-top: 16px; }
-      .hero-copy, .hero-card, .feature, .menu-card, .contact-card, .quote { padding: 20px; }
-      h1 { max-width: 100%; }
-      .cta-row { flex-direction: column; }
-      .btn { width: 100%; }
-      .menu-list { grid-template-columns: 1fr; }
-      .visual { min-height: 290px; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="wrap">
     <header class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          Μπαλαούρο
-          <small>Ουζερί • Ψαροταβέρνα • Καβάλα</small>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Κύρια πλοήγηση">
-        <a href="#about">Για το μαγαζί</a>
-        <a href="#menu">Μενού</a>
-        <a href="#contact">Επικοινωνία</a>
+      <div class="brand"><div class="logo"></div><div>Μπαλαούρο<small>Ουζερί • Ψαροταβέρνα • Καβάλα</small></div></div>
+      <nav class="nav">
+        <a class="active" href="index.html">Αρχική</a>
+        <a href="story.html">Story</a>
+        <a href="menu.html">Μενού</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Επικοινωνία</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <div class="eyebrow"><i></i> Seaside dining με premium παρουσίαση</div>
-          <h1>Η Καβάλα σερβίρεται στο τραπέζι σας.</h1>
-          <p>
-            Για το <strong>Μπαλαούρο</strong> δημιουργήθηκε μια ζεστή, κομψή και υψηλής αισθητικής online παρουσίαση —
-            με έμφαση στα φρέσκα ψάρια, τους ουζομεζέδες, το αυθεντικό οικογενειακό ύφος και τη θαλασσινή εμπειρία
-            που κάνει τον επισκέπτη να θυμάται το όνομα.
-          </p>
-          <div class="cta-row">
-            <a class="btn primary" href="https://www.balaouro.gr/" target="_blank" rel="noreferrer">Επίσημο site</a>
-            <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=%CE%9C%CF%80%CE%B1%CE%BB%CE%B1%CE%BF%CF%8D%CF%81%CE%BF%20%CE%9A%CE%B1%CE%B2%CE%AC%CE%BB%CE%B1" target="_blank" rel="noreferrer">Άνοιγμα στον χάρτη</a>
-            <a class="btn secondary" href="tel:+302510225222">Κλήση τώρα</a>
-          </div>
-          <div class="quick-metrics">
-            <div class="metric"><strong>Φρέσκο</strong><span>Θαλασσινά, ψάρια και πιάτα ημέρας.</span></div>
-            <div class="metric"><strong>Κομψό</strong><span>Σκούρο, ατμοσφαιρικό design που δείχνει premium.</span></div>
-            <div class="metric"><strong>Έτοιμο για πώληση</strong><span>Δουλεύει σαν βιτρίνα για πελάτη που θέλει να εντυπωσιάσει.</span></div>
-          </div>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><i></i> Πολυτελής, καθαρή, έτοιμη για πώληση παρουσίαση</div>
+        <h1>Φαγητό, εικόνες και ατμόσφαιρα — όχι απλώς μία σελίδα.</h1>
+        <p>Έφτιαξα ξανά το site ώστε να μοιάζει με κανονικό restaurant brand: περισσότερες σελίδες, περισσότερες φωτογραφίες φαγητού, πιο συμπαγής διάταξη και πιο σοβαρή premium εικόνα για παρουσίαση στον πελάτη.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="menu.html">Δες το μενού</a>
+          <a class="btn secondary" href="gallery.html">Άνοιξε τη gallery</a>
+          <a class="btn secondary" href="https://www.balaouro.gr/" target="_blank" rel="noreferrer">Πηγή business</a>
         </div>
-
-        <aside class="hero-card">
-          <div class="visual" aria-label="Εικαστική πρόταση για το Μπαλαούρο">
-            <div class="sun"></div>
-            <div class="boat"></div>
-            <div class="sea"></div>
-            <div class="wave"></div>
-          </div>
-          <div class="info-stack">
-            <div class="pill"><span>Τοποθεσία</span><strong>Θάσου 19, Λιμανάκι Σφαγείων, Καβάλα</strong></div>
-            <div class="pill"><span>Τηλέφωνο</span><strong>2510 225 222</strong></div>
-            <div class="pill"><span>Site</span><strong>balaouro.gr</strong></div>
-            <div class="pill"><span>Ύφος</span><strong>Ουζερί με sea-view χαρακτήρα</strong></div>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section" id="about">
-        <h2>Τι δείχνει το concept</h2>
-        <p class="lead">
-          Το brand τοποθετείται σαν ένα αυθεντικό παραθαλάσσιο εστιατόριο με σιγουριά και φινέτσα: καθαρά μηνύματα,
-          δυνατό hero section, premium χρωματική παλέτα και εμπειρία που βγάζει εμπιστοσύνη από την πρώτη οθόνη.
-        </p>
-        <div class="grid-3">
-          <div class="feature">
-            <div class="icon">✦</div>
-            <h3>Ατμόσφαιρα υψηλής αξίας</h3>
-            <p>Σκούρο θαλασσινό φόντο, χρυσές πινελιές και γυάλινα cards για αίσθηση boutique brand.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">◌</div>
-            <h3>Περιεχόμενο με νόημα</h3>
-            <p>Τονίζεται η κουζίνα, η φιλοξενία και το positioning του μαγαζιού χωρίς φλύαρο κείμενο.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">↗</div>
-            <h3>Καλύτερο για πώληση</h3>
-            <p>Έχει ξεκάθαρα CTA, επαγγελματική δομή και εικόνα που μπορεί να παρουσιαστεί άνετα σε πελάτη.</p>
-          </div>
+        <div class="quick">
+          <div class="stat"><strong>Πολλές σελίδες</strong><span>Home, Story, Menu, Gallery, Contact.</span></div>
+          <div class="stat"><strong>Πολλές εικόνες</strong><span>Πραγματικές φωτογραφίες από το site του μαγαζιού.</span></div>
+          <div class="stat"><strong>Πιο μαζεμένο</strong><span>Σφιχτή δομή που δείχνει ακριβότερη και πιο καθαρή.</span></div>
         </div>
-      </section>
+      </div>
+      <div class="visual">
+        <div class="sun"></div>
+        <div class="boat"></div>
+        <div class="sea"></div>
+        <div class="wave"></div>
+      </div>
+    </section>
 
-      <section class="section" id="menu">
-        <h2>Μενού & εμπειρία</h2>
-        <p class="lead">
-          Βασισμένο στα δημόσια στοιχεία του μαγαζιού: μεσογειακή κουζίνα, ορεκτικά, θαλασσινά, φρέσκα ψάρια,
-          κρεατικά και μεγάλη ποικιλία σε ούζο, τσίπουρο, κρασί και μπύρα.
-        </p>
-        <div class="menu-grid">
-          <div class="menu-card">
-            <div class="chips" aria-label="Κύριες κατηγορίες">
-              <span class="chip">Ουζομεζέδες</span>
-              <span class="chip">Θαλασσινά</span>
-              <span class="chip">Ψάρια ημέρας</span>
-              <span class="chip">Κρεατικά</span>
-              <span class="chip">Τσίπουρο & ούζο</span>
-              <span class="chip">Κρασί & μπύρες</span>
-            </div>
-            <div class="menu-list">
-              <div class="menu-item"><strong>Ορεκτικά</strong><span>Ταλαγάνι, κολοκυθοκεφτέδες, μπουγιουρντί, σαρμαδάκια, σκορδαλιά.</span></div>
-              <div class="menu-item"><strong>Θαλασσινά</strong><span>Καλαμάρι, μύδια, γαρίδες, χταπόδι, σουπιές, γαριδομακαρονάδα.</span></div>
-              <div class="menu-item"><strong>Ψάρια</strong><span>Τσιπούρα, λαβράκι, κουτσομούρα, μπαρμπούνια, σαρδέλα γούνα.</span></div>
-              <div class="menu-item"><strong>Κρέατα</strong><span>Μπιφτέκι, σνίτσελ, λουκάνικο, ψαρονέφρι, κοτοσνιτσελάκια.</span></div>
-            </div>
-          </div>
-          <aside class="quote">
-            <p>
-              «Φιλικό περιβάλλον, φρέσκες πρώτες ύλες και θαλασσινή γεύση που κάνει τον πελάτη να νιώθει
-              ότι βρήκε το δικό του στέκι δίπλα στη θάλασσα.»
-            </p>
-            <div class="divider"></div>
-            <div class="signature">Τοποθέτηση brand</div>
-            <p style="margin-top:12px;color:var(--muted);font-size:.98rem;line-height:1.7;">
-              Η ιδέα εδώ είναι να πουλήσει συναίσθημα, ποιότητα και εμπιστοσύνη — όχι απλώς να δείξει ένα μενού.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <h2>Επικοινωνία</h2>
-        <p class="lead">Οι πληροφορίες που ενσωματώθηκαν βασίζονται στα δημόσια στοιχεία του μαγαζιού και τοποθετούνται καθαρά για άμεση χρήση.</p>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <div class="contact-list">
-              <div class="contact-row"><div><span>Διεύθυνση</span><strong>Θάσου 19, Λιμανάκι Σφαγείων, 652 01 Καβάλα</strong></div><div>📍</div></div>
-              <div class="contact-row"><div><span>Τηλέφωνο</span><strong><a href="tel:+302510225222">2510 225 222</a></strong></div><div>☎</div></div>
-              <div class="contact-row"><div><span>Email</span><strong><a href="mailto:ouzeribalaouro@yahoo.gr">ouzeribalaouro@yahoo.gr</a></strong></div><div>✉</div></div>
-              <div class="contact-row"><div><span>Ώρες λειτουργίας</span><strong>Καθημερινά, περίπου 10:00–00:00</strong></div><div>⏱</div></div>
-            </div>
-          </div>
-          <div class="contact-card">
-            <h3 style="margin:0 0 10px;font-size:1.2rem;">Έτοιμο για παρουσίαση</h3>
-            <p style="color:var(--muted);line-height:1.8;margin:0 0 16px;">
-              Αυτό το one-page website είναι φτιαγμένο για να δείχνει premium από την πρώτη ματιά, με καθαρή δομή,
-              ευανάγνωστα CTA και εικόνα που ταιριάζει σε business που θέλει να σταθεί σωστά online.
-            </p>
-            <div class="chips">
-              <span class="chip">Mobile-first</span>
-              <span class="chip">Elegant UI</span>
-              <span class="chip">Fast static page</span>
-              <span class="chip">Easy to share</span>
-            </div>
-            <div class="divider"></div>
-            <p style="margin:0;color:var(--muted);font-size:.95rem;line-height:1.75;">
-              Ζωντανή παρουσίαση: <a href="https://clodb00t.github.io/greece-news-dashboard/" target="_blank" rel="noreferrer" style="text-decoration:underline;">clodb00t.github.io/greece-news-dashboard</a>
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="divider"></div>
-      Crafted as a polished sales-ready landing page for <strong>Μπαλαούρο</strong> using publicly available business details.
-    </footer>
+    <section class="section">
+      <div class="page-title"><div><div class="kicker">Featured food</div><h2>Ορεκτικά, θαλασσινά και εικόνες που τραβάνε βλέμμα</h2></div></div>
+      <p class="lead">Το προηγούμενο ήταν πολύ “μία σελίδα και τέλος”. Τώρα υπάρχει δομή που φαίνεται πιο ολοκληρωμένη: hero, story, menu, gallery, contact, και πολλές φωτογραφίες από τα πιάτα.</p>
+      <div class="media-grid">
+        <a class="image-card big" href="gallery.html"><img src="https://www.balaouro.gr/wp-content/uploads/2016/04/mussel-risotto.jpg" alt="Θαλασσινό πιάτο" /></a>
+        <a class="image-card side" href="gallery.html"><img src="https://www.balaouro.gr/wp-content/uploads/2016/04/arxiki-kalamaria.jpg" alt="Καλαμάρι" /></a>
+        <a class="image-card small" href="gallery.html"><img src="https://www.balaouro.gr/wp-content/uploads/2016/04/arxiki-xtapodi.jpg" alt="Χταπόδι" /></a>
+        <a class="image-card small" href="gallery.html"><img src="https://www.balaouro.gr/wp-content/uploads/2016/04/Shrimp-saganaki.jpg" alt="Γαρίδες σαγανάκι" /></a>
+        <a class="image-card small" href="gallery.html"><img src="https://www.balaouro.gr/wp-content/uploads/2016/04/bouyiourdi.jpg" alt="Μπουγιουρντί" /></a>
+      </div>
+    </section>
   </div>
 </body>
 </html>
